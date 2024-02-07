@@ -42,7 +42,7 @@ Then install by running `stow` to create thw symlinks.
 so back it up before running this command.
 ```bash
 cd dotfiles
-stow --append .
+stow --adopt .
 ```
 
 ## Note on bashrc and zshrc
