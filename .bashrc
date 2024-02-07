@@ -5,6 +5,7 @@ alias rain="rusty-rain"
 alias lss="exa --icons -lh --tree -L=1 -GF --no-permissions --no-user --git"
 alias lsr="exa --icons -lh --tree --no-permissions --no-user --git"
 alias laz="lazygit"
+alias lz="lazygit"
 alias pd="proot-distro"
 
 export PATH="~/.local/bin:~/.cargo/bin:~/go/bin:$PATH"
