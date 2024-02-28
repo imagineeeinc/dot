@@ -88,6 +88,12 @@ lvim.plugins = {
     end,
   },
   {
+    "natecraddock/workspaces.nvim",
+    config = function()
+      require("workspaces").setup()
+    end,
+  },
+  {
     "itchyny/vim-cursorword",
       event = {"BufEnter", "BufNewFile"},
       config = function()
@@ -131,7 +137,13 @@ lvim.plugins = {
     },
   },
   {
+    "alaviss/nim.nvim"
+  },
+  {
     "vimpostor/vim-tpipeline"
+  },
+  {
+    "ixru/nvim-markdown"
   }
 }
 
