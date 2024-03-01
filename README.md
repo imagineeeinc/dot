@@ -23,6 +23,7 @@ it just hints what should be in the setup.
 - [Powershell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (Windows)
 - [Lazygit](https://github.com/jesseduffield/lazygit#installation) (required for my setup)
 - [Exa](https://the.exa.website/) (optinal extra)
+- [pkm](https://github.com/wick3dr0se/pkm) (optinal extra)
 - [Glow (markdown reader)](https://github.com/charmbracelet/glow) (optinal extra)
 - GCC (from package manager)
 

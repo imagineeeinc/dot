@@ -21,6 +21,7 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `O`: insert new line above.
 - `a`: enter after the cursor.
 - `A`: go to end of the line.
+- `c`: after doing visual selection, deletes text and enters insert mode.
 - `Arrowkeys`: move around.
 
 ## Funtions
@@ -43,6 +44,8 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `shift+z ("_d)`: delete (do not put in clipboard) (visual mode).
 - `tab (>)`: indent (visual mode).
 - `shift+tab (<)`: unindent (visual mode).
+- `/<search>`: searches buffer for <search> 
+  - `n`: moves to next result
 
 ## Tabs
 - `shift+h (<leader>bb)`: prev tab.
@@ -56,5 +59,6 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `ctrl+up/down`: increase/decrese size verticaly.
 
 ## Git
-- `<leader>gg`: open up git menu
+- `<leader>g`: open up git menu
+- `<leader>gg`: open up lazygit
 refer to [lazygit plugin](https://github.com/kdheepak/lazygit.nvim) for usage.

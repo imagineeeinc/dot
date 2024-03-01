@@ -8,7 +8,7 @@ alias laz="lazygit"
 alias lz="lazygit"
 alias pd="proot-distro"
 
-export PATH="~/.local/bin:~/.cargo/bin:~/go/bin:$PATH"
+export PATH="~/.local/bin:~/.local/bin/pkm:~/.cargo/bin:~/go/bin:$PATH"
 export PATH="~/.detaspace/bin:$PATH"
 # Deno
 export DENO_INSTALL="~/.deno"
