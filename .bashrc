@@ -6,6 +6,7 @@ alias lss="eza --icons -lh --tree -L=1 -GF --no-permissions --no-user --git"
 alias lsr="eza --icons -lh --tree --no-permissions --no-user --git"
 alias laz="lazygit"
 alias lz="lazygit"
+alias ani="ani-cli -v"
 alias pd="proot-distro"
 alias :q="exit"
 
@@ -25,7 +26,7 @@ export EDITOR="lvim"
 export NDK=~/android-ndk-r26b-aarch64
 
 # fzf
-export FZF_DEFAULT_OPTS="--border --bind 'enter:become(lvim {})"
+# export FZF_DEFAULT_OPTS="--border --bind 'enter:become(lvim {})"
 
 eval "$(zoxide init bash)"
 
