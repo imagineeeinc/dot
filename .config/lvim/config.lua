@@ -148,7 +148,7 @@ lvim.plugins = {
   {
     "sindrets/winshift.nvim",
     config = function()
-      require("winshift.nvim").setup({
+      require("winshift").setup({
       highlight_moving_win = true,  -- Highlight the window being moved
       focused_hl_group = "Visual",  -- The highlight group used for the moving window
       moving_win_options = {
@@ -206,10 +206,17 @@ lvim.plugins = {
         })
       end,
     })
-    end,
+    end
   },
   {
     "danilamihailov/beacon.nvim"
+  },
+  {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end,
+    lazy = false
   }
 }
 
