@@ -27,7 +27,8 @@ pressing one will run it or if it has a sub command it will show more commands. 
 ## Funtions
 - `ctrl+s (:w/ <leader>w)`: save.
 - `shift+x (:q/ <leader>q)`: close current buffer.
-- `:qa` : close all buffer (quit).
+- `:qa`: close all buffer (quit).
+- `ctrl+c (:Gen)`: opens a ai chat window to talk to, when run on selection it sends the selection to the ai. (make sure `ollama` is installed on the system).
 
 ## Terminal
 - `ctrl+t`: terminal (popup).
@@ -36,14 +37,16 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `alt+3`: popup terminal.
 
 ## Manipulations
-- `ctrl+c (y)`: copy (visual mode).
-- `ctrl+x (x)`: cut (visual mode).
+- `y`: copy (visual mode).
+- `x`: cut (visual mode).
+- `c`: delete and insert (visual mode).
 - `ctrl+shift+v (p)`: paste.
 - `shift+p`: paste before the cursor.
 - `d`: delete.
 - `shift+z ("_d)`: delete (do not put in clipboard) (visual mode).
 - `tab (>)`: indent (visual mode).
 - `shift+tab (<)`: unindent (visual mode).
+- `<number[optional]>gcc`: automaticly comment out or in a line or `<number>` of lines down.
 - `/<search>`: searches buffer for <search> 
   - `n`: moves to next result
 
@@ -57,6 +60,7 @@ pressing one will run it or if it has a sub command it will show more commands. 
 ## Window (Buffer)
 - `ctrl+left/right`: increase/decrese size horizontly.
 - `ctrl+up/down`: increase/decrese size verticaly.
+- `ctrl+m`: rearange buffers (reference the winshift plugin).
 
 ## Git
 - `<leader>g`: open up git menu

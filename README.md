@@ -23,9 +23,14 @@ it just hints what should be in the setup.
 - [Powershell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (Windows)
 - [Lazygit](https://github.com/jesseduffield/lazygit#installation) (required for my setup)
 - [Exa](https://the.exa.website/) (optinal extra)
-- [pkm](https://github.com/wick3dr0se/pkm) (optinal extra)
-- [Glow (markdown reader)](https://github.com/charmbracelet/glow) (optinal extra)
+- [pkm](https://github.com/wick3dr0se/pkm) (optional extra)
+- [Glow (markdown reader)](https://github.com/charmbracelet/glow) (optonal extra)
+- [Ollama (llm runtime)](https://github.com/ollama/ollama) (required for my setup) ([ollama on termux requires compiling from source](https://gitlab.com/-/snippets/3682973))
+- [ani-cli](https://github.com/pystardust/ani-cli) (can be installed from package manager)
 - GCC (from package manager)
+- ncdu (a tui file size viewer) (optional extra) (from package manager)
+- ranger (a tui file manager) (optional extra) (from package manager)
+- [cmus](https://cmus.github.io/#download) (a tui music player using pulseaudio) (optional extra)
 
 ## Post Install
 - Add lvim to path
@@ -48,4 +53,4 @@ stow --adopt .
 
 ## Note on bashrc and zshrc
 My main linux setup is on termux on android so my setup is not optimal.
-I store my binaries in `~/.local/bin/`.  
+I store self complied/ downloaded binaries in `~/.local/bin/`.  
