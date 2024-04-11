@@ -227,7 +227,8 @@ lvim.plugins = {
   {
     "David-Kunz/gen.nvim",
     opts = {
-      model = "deepseek-coder:latest", -- The default model to use.
+      model = "deepseek-coder:latest", -- The default model to use. 
+      -- I recomend "stable-code:latest" if you have a modern system and not on a phone like me.
       host = "localhost", -- The host running the Ollama service.
       port = "11434", -- The port on which the Ollama service is listening.
       quit_map = "q", -- set keymap for close the response window
