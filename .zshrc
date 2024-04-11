@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # pnpm
-export PNPM_HOME="/data/data/com.termux/files/home/.local/share/pnpm"
+export PNPM_HOME="~/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

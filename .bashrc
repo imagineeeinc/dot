@@ -7,6 +7,7 @@ alias lsr="eza --icons -lh --tree --no-permissions --no-user --git"
 alias laz="lazygit"
 alias lz="lazygit"
 alias ani="ani-cli -v"
+alias frees="du -h -d 1 . | sort -hr"
 alias pd="proot-distro"
 alias :q="exit"
 
