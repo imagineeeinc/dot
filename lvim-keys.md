@@ -49,6 +49,7 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `<number[optional]>gcc`: automaticly comment out or in a line or `<number>` of lines down.
 - `/<search>`: searches buffer for <search> 
   - `n`: moves to next result
+  - `:noh`: stops search and removes highlights.
 
 ## Tabs
 - `shift+h (<leader>bb)`: prev tab.
