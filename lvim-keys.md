@@ -67,3 +67,7 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `<leader>g`: open up git menu
 - `<leader>gg`: open up lazygit
 refer to [lazygit plugin](https://github.com/kdheepak/lazygit.nvim) for usage.
+
+## Neovide
+- `ctrl++`: scale window bigger.
+- `ctrl+-`: scale window smaller.
