@@ -14,6 +14,8 @@ vim.g.italic_comments = true               -- italic comments(Default: true)
 vim.g.italic_keywords = true               -- italic keywords(Default: true)
 vim.g.italic_functions = true              -- italic functions(Default: false)
 vim.g.italic_variables = true              -- italic variables(Default: false)
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
 lvim.plugins = {
   {
@@ -41,7 +43,7 @@ lvim.plugins = {
       show_cursorline = true, -- Enable 'cursorline' for the window while peeking
     }
     end,
-  }, 
+  },
   {
     "norcalli/nvim-colorizer.lua",
       config = function()
@@ -59,7 +61,8 @@ lvim.plugins = {
   {
     "npxbr/glow.nvim",
     ft = {"markdown"},
-    build = "apt install glow"
+    build = "apt install glow",
+    config = true, cmd = "Glow"
   },
   {
     "karb94/neoscroll.nvim",
@@ -227,13 +230,12 @@ lvim.plugins = {
   {
     "David-Kunz/gen.nvim",
     opts = {
-      model = "deepseek-coder:latest", -- The default model to use. 
-      -- I recomend "stable-code:latest" if you have a modern system and not on a phone like me.
+      model = "stable-code:latest", -- The default model to use.
       host = "localhost", -- The host running the Ollama service.
       port = "11434", -- The port on which the Ollama service is listening.
       quit_map = "q", -- set keymap for close the response window
       retry_map = "<c-r>", -- set keymap to re-send the current prompt
-      init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,
+      init = function(options) pcall(io.popen, "ollama serve &") end,
       -- Function to initialize Ollama
       command = function(options)
           local body = {model = options.model, stream = true}
@@ -252,7 +254,6 @@ lvim.plugins = {
     }
   }
 }
-
 --funtions
 lvim.builtin.terminal.open_mapping = "<c-t>"
 lvim.keys.normal_mode["<S-x>"] = ":q<CR>"
@@ -260,6 +261,16 @@ lvim.keys.normal_mode["<C-n>"] = ":tabnew"
 lvim.keys.normal_mode["<C-m>"] = ":WinShift<CR>"
 lvim.keys.normal_mode["<C-c>"] = ":Gen<CR>"
 lvim.keys.visual_mode["<C-c>"] = ":Gen<CR>"
+
+if vim.g.neovide == true then
+  vim.g.neovide_scale_factor = 0.8
+  lvim.builtin.which_key.mappings["+"] = {
+    "<cmd>lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", "Scale Neovide Zoom in"
+  }
+  lvim.builtin.which_key.mappings["-"] = {
+    "<cmd>lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", "Scale Neovide Zoom out"
+  }
+end
 
 --manipulation
 lvim.keys.visual_mode["<S-z>"] = '"_d'
@@ -278,4 +289,3 @@ lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 --Tabs
 lvim.keys.normal_mode["<S-h>"] = ":bprev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
-
