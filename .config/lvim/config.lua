@@ -284,7 +284,7 @@ lvim.plugins = {
 --funtions
 lvim.builtin.terminal.open_mapping = "<c-t>"
 lvim.keys.normal_mode["<S-x>"] = ":q<CR>"
-lvim.keys.normal_mode["<C-n>"] = ":tabnew"
+-- lvim.keys.normal_mode["<C-n>"] = ":tabnew"
 lvim.keys.normal_mode["<C-m>"] = ":WinShift<CR>"
 lvim.keys.normal_mode["<C-c>"] = ":Gen<CR>"
 lvim.keys.visual_mode["<C-c>"] = ":Gen<CR>"
