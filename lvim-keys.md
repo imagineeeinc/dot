@@ -31,6 +31,11 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `shift+x (:q/ <leader>q)`: close current buffer.
 - `:qa`: close all buffer (quit).
 - `ctrl+c (:Gen)`: opens a ai chat window to talk to, when run on selection it sends the selection to the ai. (make sure `ollama` is installed on the system).
+- `<leader>f`: opens Telesocpe file finder.
+- `q:`: see vim command history.
+- `:Oil`: opens `oil.nvim` buffer file manager, reffer to project for more details.
+- `:Glow`: opens a preview of the current markdown file.
+- `:Beacon`: highlights where the cursor is.
 
 ## Terminal
 - `ctrl+t`: terminal (popup).
@@ -49,23 +54,28 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `tab (>)`: indent (visual mode).
 - `shift+tab (<)`: unindent (visual mode).
 - `<number[optional]>gcc`: automaticly comment out or in a line or `<number>` of lines down.
+- `.`: replays last change.
+
+## Find and Replace
 - `/<search>`: searches buffer for <search> 
   - `n`: moves to next result
   - `shift+N`: moves to previous result
   - `:noh`: stops search and removes highlights.
-- `*`: searches buffer for the current word being hoverd over. The  use like normal search
+  - `gn`: selects in visual mode the search.
+- `*`: searches buffer for the current word under the cursor. The  use like normal search
+- `:%s/<search>/<replace>/g`: searches the whole buffer for `<search>` and replaces it with `<repalce>`. `%` sets it to the whole buffer. Adding `c` to the end adds a confirmation to all the replacements.
 
 ## Tabs
 - `shift+h (<leader>bb)`: prev tab.
 - `shift+h (<leader>bn)`: next tab.
 - `<leader>c`: close tab.
 - `<leader>bj`: jump to tab.
-- `ctrl+n (:tabnew <filename>)`: new file in a new tab.
+- `:tabnew <filename>`: new file in a new tab with `<filename>` as the filename.
 
 ## Window (Buffer)
 - `ctrl+left/right`: increase/decrese size horizontly.
 - `ctrl+up/down`: increase/decrese size verticaly.
-- `ctrl+m`: rearange buffers (reference the winshift plugin).
+- `ctrl+m (:WinShift)`: rearange buffers (reference the winshift plugin).
 
 ## Git
 - `<leader>g`: open up git menu
