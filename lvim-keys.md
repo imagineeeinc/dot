@@ -23,6 +23,8 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `A`: go to end of the line.
 - `c`: after doing visual selection, deletes text and enters insert mode.
 - `Arrowkeys`: move around.
+- `b`: move to start of the word currently on.
+- `e`: move to end of the word currently on.
 
 ## Funtions
 - `ctrl+s (:w/ <leader>w)`: save.
@@ -49,7 +51,9 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `<number[optional]>gcc`: automaticly comment out or in a line or `<number>` of lines down.
 - `/<search>`: searches buffer for <search> 
   - `n`: moves to next result
+  - `shift+N`: moves to previous result
   - `:noh`: stops search and removes highlights.
+- `*`: searches buffer for the current word being hoverd over. The  use like normal search
 
 ## Tabs
 - `shift+h (<leader>bb)`: prev tab.
