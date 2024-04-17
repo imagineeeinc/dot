@@ -284,11 +284,16 @@ lvim.plugins = {
 --funtions
 lvim.builtin.terminal.open_mapping = "<c-t>"
 lvim.keys.normal_mode["<S-x>"] = ":q<CR>"
--- lvim.keys.normal_mode["<C-n>"] = ":tabnew"
+lvim.keys.normal_mode["<C-n>"] = ":tabnew"
 lvim.keys.normal_mode["<C-m>"] = ":WinShift<CR>"
 lvim.keys.normal_mode["<C-c>"] = ":Gen<CR>"
 lvim.keys.visual_mode["<C-c>"] = ":Gen<CR>"
-
+lvim.builtin.which_key.mappings["e"] = {
+  "<cmd>NvimTreeFocus<CR>", "Explorer"
+}
+lvim.builtin.which_key.mappings["E"] = {
+  "<cmd>NvimTreeToggle<CR>", "Toggle Explorer"
+}
 if vim.g.neovide == true then
   lvim.builtin.which_key.mappings["+"] = {
     "<cmd>lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", "Scale Neovide Zoom in"
