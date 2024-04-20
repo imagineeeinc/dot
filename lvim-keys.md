@@ -24,7 +24,7 @@ pressing one will run it or if it has a sub command it will show more commands. 
 - `c`: after doing visual selection, deletes text and enters insert mode.
 - `Arrowkeys`: move around.
 - `b`: move to start of the word currently on.
-- `e`: move to end of the word currently on.
+- `n (e)`: move to end of the word currently on.
 
 ## Funtions
 - `ctrl+s (:w/ <leader>w)`: save.
@@ -58,8 +58,8 @@ pressing one will run it or if it has a sub command it will show more commands. 
 
 ## Find and Replace
 - `/<search>`: searches buffer for <search> 
-  - `n`: moves to next result
-  - `shift+N`: moves to previous result
+  - `m (/)`: moves to next result
+  - `shift+M (?)`: moves to previous result
   - `:noh`: stops search and removes highlights.
   - `gn`: selects in visual mode the search.
 - `*`: searches buffer for the current word under the cursor. The  use like normal search

@@ -15,7 +15,7 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
       set shellquote= shellxquote=
     ]]
 
-  -- Set a compatible clipboard manager
+    -- Set a compatible clipboard manager
   vim.g.clipboard = {
     copy = {
       ["+"] = "win32yank.exe -i --crlf",
@@ -288,6 +288,10 @@ lvim.keys.normal_mode["<C-n>"] = ":tabnew"
 lvim.keys.normal_mode["<C-m>"] = ":WinShift<CR>"
 lvim.keys.normal_mode["<C-c>"] = ":Gen<CR>"
 lvim.keys.visual_mode["<C-c>"] = ":Gen<CR>"
+lvim.keys.normal_mode["m"] = "/<CR>"
+lvim.keys.normal_mode["M"] = "?<CR>"
+lvim.keys.normal_mode["n"] = "e"
+
 lvim.builtin.which_key.mappings["e"] = {
   "<cmd>NvimTreeFocus<CR>", "Explorer"
 }
