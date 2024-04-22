@@ -87,7 +87,7 @@ HEADLINE_DO_ERR=true
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cp npm node python tmux zoxide)
+plugins=(git cp npm node python tmux zoxide zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 

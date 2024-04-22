@@ -32,13 +32,14 @@ it just hints what should be in the setup.
 
 ### Tools
 - [Exa](https://the.exa.website/) (recommended)
-- [pkm](https://github.com/wick3dr0se/pkm) (recommended)
+- [nala](https://gitlab.com/volian/nala) (recommended)
 - [Glow (markdown reader)](https://github.com/charmbracelet/glow) (recommended)
 - [Ollama (llm runtime)](https://github.com/ollama/ollama) ([ollama on termux requires compiling from source](https://gitlab.com/-/snippets/3682973)) (required for my setup) 
 - [ani-cli](https://github.com/pystardust/ani-cli) (can be installed from package manager) (*optional*)
 - ncdu (a tui file size viewer) (from package manager) (recommended)
 - ranger (a tui file manager) (from package manager) (recommended)
 - [zoxide (better `cd`)](https://github.com/ajeetdsouza/zoxide) (recommended)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (recommended)
 
 ## Post Install
 - Add lvim to path
