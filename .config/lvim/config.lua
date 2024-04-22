@@ -317,8 +317,8 @@ lvim.keys.normal_mode["<S-tab>"] = "<<"
 --changes
 lvim.keys.normal_mode["<C-z>"] = "u"
 lvim.keys.normal_mode["<C-y>"] = "<C-r>"
-lvim.keys.normal_mode["<C-A-Down>"] = "<C-v>"
-lvim.keys.normal_mode["<C-A-Up>"] = "<C-v>"
+lvim.keys.normal_mode["<C-A-Down>"] = "<C-v><Down>"
+lvim.keys.normal_mode["<C-A-Up>"] = "<C-v><Up>"
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 
 --Tabs
