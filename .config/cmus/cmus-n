@@ -1,0 +1,37 @@
+while test $# -ge 2
+do
+	eval _$1='$2'
+	shift
+	shift
+done
+
+if [ "$_status" = "stopped" ]; then
+  rm ~/.cover.jpg
+  exit
+fi
+
+id="cmus"
+
+title="cmus"
+if [ -z "$_title" ]; then
+  title="$_file"
+else
+  title="$_title"
+fi
+
+ffmpeg -i "$_file" -an -vcodec copy ~/.cover.jpg
+
+termux-notification \
+  --id $id \
+  --group termux-cmus \
+  --alert-once \
+  --title "$title" \
+  --content "$_artist, $_album" \
+  --type media \
+  --priority max \
+  --media-previous "cmus-remote -r" \
+  --media-play "cmus-remote -p" \
+  --media-pause "cmus-remote -u" \
+  --media-next "cmus-remote -n" \
+  --image-path ~/.cover.jpg \
+  --on-delete "rm ~/.cover.jpg"
