@@ -279,6 +279,11 @@ lvim.plugins = {
       no_auto_close = false, -- Never closes the window automatically.
       debug = false -- Prints errors and the command which is run.
     }
+  },
+  { 'gen740/SmoothCursor.nvim',
+    config = function()
+      require('smoothcursor').setup()
+    end
   }
 }
 --funtions

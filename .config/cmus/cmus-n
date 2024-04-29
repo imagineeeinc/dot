@@ -14,7 +14,8 @@ id="cmus"
 
 title="cmus"
 if [ -z "$_title" ]; then
-  title="$_file"
+  title=${_file##*/}
+  title="${title%.*}"
 else
   title="$_title"
 fi
