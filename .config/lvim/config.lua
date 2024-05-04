@@ -26,6 +26,9 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
       ["*"] = "win32yank.exe -o --lf",
     },
   }
+  lvim.builtin.nvimtree.setup.view.width = 25
+else
+  lvim.builtin.nvimtree.setup.view.width = 20
 end
 
 -- Custom Config start
