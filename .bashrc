@@ -22,7 +22,7 @@ export GOBIN=$(go env GOPATH)/bin
 export PATH="$GOBIN:$PATH"
 
 export EDITOR="lvim"
-export NDK=~/android-ndk-r26b-aarch64
+export NDK=~/android-ndk-r26b
 
 # fzf
 # export FZF_DEFAULT_OPTS="--border --bind 'enter:become(lvim {})"
