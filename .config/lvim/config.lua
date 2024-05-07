@@ -46,6 +46,8 @@ vim.g.italic_functions = true              -- italic functions(Default: false)
 vim.g.italic_variables = true              -- italic variables(Default: false)
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
+vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
+vim.opt.tabstop = 2 -- insert 2 spaces for a tab
 
 lvim.plugins = {
   {
