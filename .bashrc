@@ -8,6 +8,8 @@ alias mov="mov-cli"
 alias frees="du -h -d 1 . | sort -hr"
 alias pd="proot-distro"
 alias :q="exit"
+alias pbcopy="xsel --input --clipboard"
+alias pbcopy="xsel --output --clipboard"
 
 export PATH="~/.local/bin:~/.cargo/bin:~/go/bin:$PATH"
 export PATH="~/.detaspace/bin:$PATH"

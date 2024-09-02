@@ -46,8 +46,8 @@ vim.g.italic_functions = true              -- italic functions(Default: false)
 vim.g.italic_variables = true              -- italic variables(Default: false)
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
-vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 2 -- insert 2 spaces for a tab
+vim.g.shiftwidth = 2 -- the number of spaces inserted for each indentation
+vim.g.tabstop = 2 -- insert 2 spaces for a tab
 
 lvim.plugins = {
   {
@@ -284,11 +284,6 @@ lvim.plugins = {
       no_auto_close = false, -- Never closes the window automatically.
       debug = false -- Prints errors and the command which is run.
     }
-  },
-  { 'gen740/SmoothCursor.nvim',
-    config = function()
-      require('smoothcursor').setup()
-    end
   }
 }
 --funtions

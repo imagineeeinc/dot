@@ -11,7 +11,8 @@ skip_update_checker = false
 
 [mov-cli.plugins] # E.g: namespace = "package-name"
 test = "mov-cli-test"
-films = "mov-cli-films"
+# films = "mov-cli-films"
+films = "film-central"
 [mov-cli.scrapers]
 default = "films"
 
