@@ -25,6 +25,7 @@ export PATH="$GOBIN:$PATH"
 
 export EDITOR="lvim"
 export NDK=~/android-ndk-r26b
+export android_ndk_path=~/android-ndk-r26b
 
 # fzf
 # export FZF_DEFAULT_OPTS="--border --bind 'enter:become(lvim {})"
