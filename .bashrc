@@ -31,6 +31,7 @@ export android_ndk_path=~/android-ndk-r26b
 # export FZF_DEFAULT_OPTS="--border --bind 'enter:become(lvim {})"
 
 eval "$(zoxide init bash)"
+eval $(ssh-agent -s)
 
 #./duckdns/duck.sh
 
