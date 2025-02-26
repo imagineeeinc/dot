@@ -64,3 +64,9 @@ map("n", "<C-A-Down>", "<C-A-v><Down>", { desc = "" })
 map("n", "<C-A-Up>", "<C-A-v><Up>", { desc = "" })
 map("n", "<C-A-Left>", "<C-A-v><Left>", { desc = "" })
 map("n", "<C-A-Right>", "<C-A-v><Right>", { desc = "" })
+
+-- Nvide
+if vim.g.neovide == true then
+  map("n", "<leader>+", "<cmd>lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", { desc = "Scale Neovide Zoom in" })
+  map("n", "<leader>-", "<cmd>lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", { desc = "Scale Neovide Zoom out" })
+end
