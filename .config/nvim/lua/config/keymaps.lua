@@ -48,8 +48,8 @@ map({ "n", "v" }, "<leader>cg", "<CMD>Gen<CR>", { desc = "Codeium Gen" })
 -- Manipulations
 map({ "n", "v" }, "d", '"_d', { desc = "Delete" })
 map({ "n", "v" }, "c", '"_c', { desc = "Edit selection" })
-map({ "n", "v" }, "p", "P", { desc = "Paste" })
-map("i", "<C-p>", "<ESC>PI", { desc = "Paste in insert mode" })
+map("v", "p", "P", { desc = "Paste" })
+map("i", "<C-p>", "<ESC>pI", { desc = "Paste in insert mode" })
 
 map("v", "<tab>", ">", { desc = "indent" })
 map("v", "<S-tab>", "<", { desc = "unindent" })
