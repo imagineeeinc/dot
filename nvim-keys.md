@@ -1,7 +1,7 @@
-# Lunar Vim Keys
-Lunar vim is a dramework for neovim which is a terminal text editor.
+#  Neovim Keys
+Lazy Vim is a distro for neovim which is a terminal text editor.
 
-This is a list full of lunarvim keybinds and commands.
+This is a list full of neovim keybinds and commands.
 Few of these keys are specific to my configratuon, thus a braket is next to it to suggest the actual command/ keys.
 If you would like you can cutomize it and anything else in the `config.lua`
 ## Leader
