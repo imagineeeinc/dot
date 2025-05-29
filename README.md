@@ -6,7 +6,7 @@ This document dosen't tell you how to install the pacakges,
 it just hints what should be in the setup.
 
 ## Main Workflow Apps
-- Editor: [Lunarvim](https://lunarvim.org/) is *cool* neovim bassed editor with **extra** features built in ([Installing](https://www.lunarvim.org/docs/installation)).
+- Editor: [Lazy Vim](https://www.lazyvim.org/) is *cool* neovim bassed editor with **extra** features built in ([Installing](https://lazyvim.org/installation)).
 - Multiplexer: [tmux](https://github.com/tmux/tmux) is a *terminal multiplexer* (Install from built in package manager).
 - Shell: [Oh my zsh](https://ohmyz.sh/) another *shell* with some smart features and **theming** (Install zsh then add [oh my zsh](https://github.com/ohmyzsh/ohmyzsh/wiki#welcome-to-oh-my-zsh)).
 - Git TUI: [Lazygit](https://github.com/jesseduffield/lazygit) a terminal bassed git client with a nice ui and keybinds ([Installing](https://github.com/jesseduffield/lazygit#installation)).
@@ -31,7 +31,7 @@ it just hints what should be in the setup.
 - GCC (from package manager) (**Required**)
 
 ### Tools
-- [Exa](https://the.exa.website/) (recommended)
+- [Eza](https://eza.rocks/) (recommended)
 - [nala](https://gitlab.com/volian/nala) (recommended)
 - [Glow (markdown reader)](https://github.com/charmbracelet/glow) (recommended)
 - [Ollama (llm runtime)](https://github.com/ollama/ollama) ([ollama on termux requires compiling from source](https://gitlab.com/-/snippets/3682973)) (required for my setup) 
@@ -42,7 +42,6 @@ it just hints what should be in the setup.
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (recommended)
 
 ## Post Install
-- Add lvim to path
 - Install [Nerdfont](https://www.nerdfonts.com/)
 
 ## Installing the dotfiles
