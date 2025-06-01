@@ -66,6 +66,7 @@ apt install stow -y
 
 To install see the folders in the root of the repo and run `stow --adopt <application>`,
 passing the correct folder name into the `<application>` to install to the `$HOME` folder.
+The `base` folder has basic config like compiler things.
 
 e.g.:
 ```bash
