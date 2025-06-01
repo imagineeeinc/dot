@@ -23,7 +23,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export GOBIN=$(go env GOPATH)/bin
 export PATH="$GOBIN:$PATH"
 
-export EDITOR="lvim"
+export EDITOR="nvim"
 export NDK=~/android-ndk-r26b
 export android_ndk_path=~/android-ndk-r26b
 
