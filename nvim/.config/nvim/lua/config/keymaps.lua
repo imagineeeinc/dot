@@ -34,9 +34,11 @@ map("n", "<leader>gg", "<CMD>LazyGit<CR>", { desc = "Open LazyGit" })
 map("n", "<leader>mm", "<CMD>MinimapToggle<CR>", { desc = "Minimap" })
 
 map("n", "<leader>b<tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
-map("n", "<leader>bn", "<cmd>tabnext<cr>", { desc = "Next Tab" })
-map("n", "<leader>bc", "<cmd>tabclose<cr>", { desc = "Close Tab" })
-map("n", "<leader>bb", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+map("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Tab" })
+map("n", "<leader>bc",  function()
+  Snacks.bufdelete()
+end, { desc = "Close Tab" })
+map("n", "<leader>bb", "<cmd>bprev<cr>", { desc = "Previous Tab" })
 
 -- Functions
 map({ "n", "v" }, "m", "/<CR>", { desc = "Next highlight" })
@@ -44,6 +46,10 @@ map({ "n", "v" }, "M", "?<CR>", { desc = "Previous highlight" })
 map({ "n", "v" }, "n", "e", { desc = "Jump to end of word" })
 map("n", "m", "/<CR>", { desc = "Jump to start of word" })
 map({ "n", "v" }, "<leader>cg", "<CMD>Gen<CR>", { desc = "Codeium Gen" })
+
+-- Terminal
+map("n", "<C-\\>", "<leader>ft", { desc = "Open Terminal"})
+map("t", "<C-\\>", "<C-\\><C-n>", { desc = "Unfocus Terminal"})
 
 -- Manipulations
 map({ "n", "v" }, "d", '"_d', { desc = "Delete" })
