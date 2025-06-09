@@ -99,16 +99,18 @@ return {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-  -- { "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   opts = {
-  --     flavour = "macchiato",
-  --   },
-  -- },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
+  { "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      flavour = "mocha",
+      transparent_background = true,
+    },
   },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   transparent_background = true
+  -- },
   {
     "alaviss/nim.nvim",
   },
@@ -167,7 +169,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "catppuccin",
     },
   },
 }
