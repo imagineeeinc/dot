@@ -13,7 +13,7 @@ it just hints what should be in the setup.
 - Multiplexer: [tmux](https://github.com/tmux/tmux) is a *terminal multiplexer* (Install from built in package manager).
 - Shell: [Oh my zsh](https://ohmyz.sh/) another *shell* with some smart features and **theming** (Install zsh then add [oh my zsh](https://github.com/ohmyzsh/ohmyzsh/wiki#welcome-to-oh-my-zsh)).
 - Git TUI: [Lazygit](https://github.com/jesseduffield/lazygit) a terminal based git client with a nice ui and keybinds ([Installing](https://github.com/jesseduffield/lazygit#installation)).
-- Music: [cmus](https://cmus.github.io/) a terminal music player, plays through pulseaudio. (Install from built in package manager)``
+- Music: [cmus](https://cmus.github.io/) a terminal music player, plays through pulseaudio. (Install from built in package manager)
 
 ## Other apps
 
