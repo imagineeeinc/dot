@@ -1,3 +1,6 @@
+function ternary ( cond , T , F )
+    if cond then return T else return F end
+end
 return {
   {
     "Pocco81/auto-save.nvim",
@@ -103,7 +106,7 @@ return {
     name = "catppuccin",
     opts = {
       flavour = "mocha",
-      transparent_background = true,
+      transparent_background = ternary(vim.g.gonvim_running == 1, false, true),
     },
   },
   -- {
@@ -173,3 +176,4 @@ return {
     },
   },
 }
+
