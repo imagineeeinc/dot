@@ -127,4 +127,6 @@ esac
 # pnpm end
 
 # atuin
+. "$HOME/.atuin/bin/env"
+
 eval "$(atuin init zsh)"
