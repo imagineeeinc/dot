@@ -11,7 +11,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="half-life"
 
-source ~/themes/headline.zsh-theme
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source ~/.config/themes/headline.zsh-theme
 
 HEADLINE_DO_CLOCK=true
 HEADLINE_LINE_MODE="on"
@@ -93,20 +95,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -126,7 +119,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# atuin
-. "$HOME/.atuin/bin/env"
+# zoxide
+eval "$(zoxide init zsh)"
 
-eval "$(atuin init zsh)"
+# McFly
+eval "$(mcfly init zsh)"
+export MCFLY_INTERFACE_VIEW=TOP

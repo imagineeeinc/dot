@@ -1,17 +1,12 @@
-alias cls="clear"
-alias ll="ls -alF"
-alias lss="eza --icons -lh --tree -L=1 -GF --no-permissions --no-user --git"
-alias lsr="eza --icons -lh --tree --no-permissions --no-user --git"
-alias lz="lazygit"
 alias ani="ani-cli -v"
 alias mov="mov-cli"
-alias frees="du -h -d 1 . | sort -hr"
 alias pd="proot-distro"
-alias :q="exit"
 alias pbcopy="xsel --input --clipboard"
 alias pbcopy="xsel --output --clipboard"
 
-export PATH="~/.local/bin:~/.cargo/bin:~/go/bin:$PATH"
+source .bashrc.shared.sh
+
+export PATH="~/.cargo/bin:~/go/bin:$PATH"
 export PATH="~/.detaspace/bin:$PATH"
 # Deno
 export DENO_INSTALL="~/.deno"
@@ -36,5 +31,3 @@ eval $(ssh-agent -s)
 #./duckdns/duck.sh
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-# already in zsh
-# eval "$(atuin init bash)"
