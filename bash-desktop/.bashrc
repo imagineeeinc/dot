@@ -1,5 +1,3 @@
-alias jer="jerry -i -d --vlc"
-
 source .bashrc.shared.sh
 
 export PATH=":~/go/bin:$PATH"
