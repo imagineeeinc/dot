@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/imagineee/.zsh/completions:"* ]]; then export FPATH="/home/imagineee/.zsh/completions:$FPATH"; fi
 source ~/.bashrc
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:~/.local/bin:$PATH
@@ -125,3 +127,14 @@ eval "$(zoxide init zsh)"
 # McFly
 eval "$(mcfly init zsh)"
 export MCFLY_INTERFACE_VIEW=TOP
+
+# NVM
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Deno
+. "$HOME/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
