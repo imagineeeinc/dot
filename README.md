@@ -5,29 +5,28 @@ I use Linux across multiple devices thus each application (and even device) has 
 so I can mix and match config on device rather than installing the whole repo.
 
 Most of the packages are installed via the package manager, some are required to follow an online guide.
-This document dosen't tell you how to install the packages,
-it just hints what should be in the setup.
+This document doesn't tell you how to install the packages,
+it just hints what should be in the setup,
+and links to the appropriate install page if needed.
 
 [**Desktop dotfiles**](https://github.com/imagineeeinc/desktop-dot) are stored separately to showcase just the desktop,
 however the desktop experience relies on these dot files.
 
 ## Main Workflow Apps
+
 - Editor: [Lazy Vim](https://www.lazyvim.org/) is *cool* neovim bassed editor with **extra** features built in ([Installing](https://lazyvim.org/installation)).
 - Multiplexer: [tmux](https://github.com/tmux/tmux) is a *terminal multiplexer* (Install from built in package manager).
-- Shell: zsh + [Oh my zsh](https://ohmyz.sh/) another *shell* with some smart features and **theming** (Install zsh then add [oh my zsh](https://github.com/ohmyzsh/ohmyzsh/wiki#welcome-to-oh-my-zsh)).
-- Git TUI: [Lazygit](https://github.com/jesseduffield/lazygit) a terminal based git client with a nice ui and keybinds ([Installing](https://github.com/jesseduffield/lazygit#installation)).
+- Shell: zsh + [starship](https://starship.rs) *shell* with some smart features and **theming** (Install zsh, change the shell using `chsh` and install [starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)).
+
+## Requirement
+
+- [Git](https://git-scm.com) (package manager)
+- [Neovim v0.9.0+](https://github.com/neovim/neovim/wiki/Installing-Neovim) (package manager)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
+- [Eza](https://eza.rocks/) (package manager)
+- [Lazygit](https://github.com/jesseduffield/lazygit#installation)
 
 ## Other apps
-
-*These are installation links*
-
-### Development
-
-- [Neovim v0.9.0+](https://github.com/neovim/neovim/wiki/Installing-Neovim) (**Required**)
-- [Git](https://git-scm.com) (**Required**)
-- [GNU Make](https://www.gnu.org/software/make/) ([Windows](https://gnuwin32.sourceforge.net/packages/make.htm)) (**Required**)
-- [Powershell 7+](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (Windows) (**Required**)
-- [oh my posh](https://ohmyposh.dev/) (Windows) (recommended)
 
 ### Programming
 
@@ -36,20 +35,16 @@ however the desktop experience relies on these dot files.
 - [Nim](https://nim-lang.org/install.html) (*optional*)
 - [Rust & Cargo](https://www.rust-lang.org/tools/install) (*optional*)
 - [Go](https://go.dev/) (*optional*)
-- GCC (from package manager) (**Required**)
 
 ### Tools
 
-- [Eza](https://eza.rocks/) (recommended) - better `ls`, aliased to `lss`
 - [nala](https://gitlab.com/volian/nala) (recommended on debian)
 - [Glow](https://github.com/charmbracelet/glow) (recommended) - tui markdown reader
 - [ani-cli](https://github.com/pystardust/ani-cli) or [jerry](https://github.com/justchokingaround/jerry/) (*optional*)
-- ncdu (from package manager) (recommended) - a tui file size viewer
-- ranger (from package manager) (recommended) - a tui file manager
-- [zoxide](https://github.com/ajeetdsouza/zoxide) (recommended) - better `cd`
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (recommended)
-- [McFly](https://github.com/cantino/mcfly) (recommended) - shell history
+- ncdu (package manager) (recommended) - a tui file size viewer
+- ranger (package manager) (recommended) - a tui file manager
 - [goneovim](https://github.com/akiyosi/goneovim?tab=readme-ov-file#getting-started) - A GUI for neovim.
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#installation) - a fetch tool (Desktop fastfetch config stored in `desktop-dot`)
 
 ## Installing the dotfiles
 
@@ -65,7 +60,7 @@ dnf install stow -y
 
 To install see the folders in the root of the repo and run `stow --adopt <application>`,
 passing the correct folder name into the `<application>` to install to the `$HOME` folder.
-The `base` folder has basic config like compiler things.
+The `base` folder has basic/ old config like compiler things.
 
 e.g.:
 ```bash
@@ -78,16 +73,23 @@ stow --adopt bash
 stow --adpot zsh
 ```
 
+### Note on zsh
+
+zsh relies on starship, so when installing zsh config files,
+ensure to install starship config files.
+
+Also, the reason why bashrc exists, while a zshrc also exists,
+is because zsh configures the front end,
+while bash manages the back end like aliases and environment variable setting.
+
 ### Note on bash
 
 Each bash configuration is separate for each device, thus to reduce redundancy,
 shared config is stored in `bash-shared/.bashrc.shared.sh`.
 
 Also, ensure to install the corresponding main bash setup.
+
 - Termux
 - desktop
 - server
 
-## Note on different devices
-My Linux setup is spread across Termux, server and desktop, so each setup has been split into it's separate folder.
-I store self complied/ downloaded binaries in `~/.local/bin/`.
