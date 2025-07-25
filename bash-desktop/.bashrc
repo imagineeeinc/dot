@@ -1,4 +1,4 @@
-source .bashrc.shared.sh
+source ~/.bashrc.shared.sh
 
 # Deno
 export DENO_INSTALL="$HOME/.deno"
