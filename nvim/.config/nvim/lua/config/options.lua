@@ -47,3 +47,8 @@ if vim.g.neovide == true then
   vim.g.neovide_cursor_vfx_mode = "pixiedust"
   vim.g.neovide_cursor_vfx_particle_density = 80.0
 end
+
+-- nvim-qt
+if vim.fn.exists(":GuiScrollBar") == 2 then
+    vim.cmd("GuiScrollBar 1")
+end

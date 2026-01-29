@@ -9,17 +9,17 @@ return {
       require("auto-save").setup()
     end,
   },
-  {
-    "wfxr/minimap.vim",
-    lazy = false,
-    build = "cargo install --locked code-minimap",
-    cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
-    config = function()
-      vim.cmd("let g:minimap_width = 10")
-      vim.cmd("let g:minimap_auto_start = 1")
-      vim.cmd("let g:minimap_auto_start_win_enter = 1")
-    end,
-  },
+  -- {
+  --   "wfxr/minimap.vim",
+  --   lazy = false,
+  --   build = "cargo install --locked code-minimap",
+  --   cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
+  --   config = function()
+  --     vim.cmd("let g:minimap_width = 10")
+  --     vim.cmd("let g:minimap_auto_start = 1")
+  --     vim.cmd("let g:minimap_auto_start_win_enter = 1")
+  --   end,
+  -- },
   {
     "nacro90/numb.nvim",
     event = "BufRead",
@@ -93,7 +93,32 @@ return {
     "wakatime/vim-wakatime",
   },
   {
-    "mrjones2014/nvim-ts-rainbow",
+    "HiPhish/rainbow-delimiters.nvim",
+    config = function()
+      require('rainbow-delimiters.setup').setup {
+        strategy = {
+          [''] = 'rainbow-delimiters.strategy.global',
+          vim = 'rainbow-delimiters.strategy.local',
+        },
+        query = {
+          [''] = 'rainbow-delimiters',
+          lua = 'rainbow-blocks',
+        },
+        priority = {
+          [''] = 110,
+          lua = 210,
+        },
+        highlight = {
+          'RainbowDelimiterRed',
+          'RainbowDelimiterYellow',
+          'RainbowDelimiterBlue',
+          'RainbowDelimiterOrange',
+          'RainbowDelimiterGreen',
+          'RainbowDelimiterViolet',
+          'RainbowDelimiterCyan',
+        },
+      }
+    end
   },
   {
     "brooth/far.vim",
@@ -150,6 +175,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
+  { 'glacambre/firenvim', build = ":call firenvim#install(0)" },
   -- {
   --   "Exafunction/codeium.vim",
   --   config = function()
