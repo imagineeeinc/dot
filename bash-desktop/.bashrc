@@ -25,11 +25,12 @@ export NVM_DIR="$HOME/.config/nvm"
 # PIP
 export PATH="$HOME/.local/lib/python3.13/site-packages:$PATH"
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$PATH"
 
 export EDITOR="nvim"
 export XDG_CONFIG_HOME=~/.config
 
-# SSH agent
-[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+alias gnvim="nvim-qt"
 
+# SSH agent
+# [ -z "$SSH_AGENT_PID" ] && eval "$(ssh-agent -s)"
