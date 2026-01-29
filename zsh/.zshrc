@@ -41,7 +41,8 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::npm
 zinit snippet OMZP::node
-zinit snippet OMZP::tmux
+zinit snippet OMZP::docker
+# zinit snippet OMZP::tmux
 zinit snippet OMZP::cp
 zinit snippet OMZP::command-not-found
 
@@ -85,6 +86,32 @@ eval "$(zoxide init zsh)"
 # fzf
 eval "$(fzf --zsh)"
 
+# wasmtime
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
+
 # Starship (Required)
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/home/imagineee/.bun/_bun" ] && source "/home/imagineee/.bun/_bun"
+
+# Taskfile completion
+eval "$(go-task --completion zsh)"
+
+# apx completions
+eval "$(apx completion zsh)"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/home/imagineee/.gdvm/bin/current_godot:/home/imagineee/.gdvm/bin:$PATH"
