@@ -1,0 +1,59 @@
+[mgr]
+  prepend_keymap = [
+    { on = "<Enter>", run = "enter" },
+    { on = "<A-Enter>", run = "open" },
+    { on = "<A-S-Enter>", run = "open --interactive" },
+    { on = "<F2>", run = "rename --cursor before_ext" },
+
+    { on = "<A-Right>", run = "forward"},
+    { on = "<A-Left>", run = "back"},
+
+    { on = "<C-t>", run = "tab_create --current"},
+    { on = "<C-Right>", run = "tab_switch 1 --relative"},
+    { on = "<C-Left>", run = "tab_switch -1 --relative"},
+    { on = "<C-w>", run = "close"},
+
+    { on = "<C-Up>", run = "arrow -5"},
+    { on = "<C-Down>", run = "arrow 5"},
+    { on = "<Home>", run = "arrow top"},
+    { on = "<End>", run = "arrow bot"},
+
+    { on = "<Tab>", run = ["toggle", "arrow 1"]},
+    { on = "<BackTab>", run = "toggle_all --state=off" },
+    { on = ["<Space>", "<Tab>"], run = "spot", desc = "File info"},
+    { on = ["<Space>", "<Space>"], run = "cd --interactive --smart", desc = "Jump into directory"},
+    { on = ["<Space>", "<#>"], run = "cd ~", desc = "Go Home"},
+    { on = ["<Space>", "<x>"], run = "suspend", desc = "Suspend"},
+    { on = ["<Space>", "<`>"], run = 'shell "$SHELL" --block', desc = "Open shell here"},
+    { on = ["<Space>", "<p>"], run = "plugin toggle-pane max-preview", desc = "Toggle large Preview"},
+    { on = ["<Space>", "<h>"], run = "hidden toggle", desc = "Toggle Hidden files"},
+    { on = ["<Space>", "<s>"], run = "plugin what-size -- '--clipboard'", desc = "Size of selection"},
+
+    { on = ["b", "c"], run = "tab_create --current", desc = "New tab"},
+    { on = ["b", "b"], run = "tab_switch 1 --relative", desc = "Previous Tab"},
+    { on = ["b", "n"], run = "tab_switch -1 --relative", desc = "Next Tab"},
+
+    { on = "y", run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ] },
+    { on = "l", run = "plugin smart-enter"},
+    { on = "m", run = "find_arrow" },
+    { on = "M", run = "find_arrow --previous" },
+
+    { on = "=", run = "plugin zoom +1" },
+    { on = "-", run = "plugin zoom -1" },
+    { on = "f", run = "plugin jump-to-char"},
+
+    { on = [ "c", "a", "a" ], run = "plugin compress", desc = "Archive selected files" },
+    { on = [ "c", "a", "p" ], run = "plugin compress -p", desc = "Archive selected files (password)" },
+    { on = [ "c", "a", "h" ], run = "plugin compress -ph", desc = "Archive selected files (password+header)" },
+    { on = [ "c", "a", "l" ], run = "plugin compress -l", desc = "Archive selected files (compression level)" },
+    { on = [ "c", "a", "u" ], run  = "plugin compress -phl", desc = "Archive selected files (password+header+level)" },
+  ]
+
+[spot]
+  prepend_keymap = [
+    { on = "<q>", run = "close" },
+  ]
+
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"

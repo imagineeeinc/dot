@@ -1,0 +1,54 @@
+[mgr]
+  ratio = [1, 5, 2]
+  sort_by = "natural"
+  sort_dir_first = true
+  sort_translit = true
+  linemode = "size"
+  show_symlink = true
+  scrolloff = 5
+  mouse = ["click", "scroll", "touch", "move", "drag"]
+
+[preview]
+  tab_size = 2
+  image_quality = 75
+
+
+[opener]
+  play = [
+    { run = "mpv --force-window=yes %s", orphan = true, for = "unix" }
+  ]
+  edit = [
+    { run = "$EDITOR %s", block = true, for = "unix" },
+  ]
+  open = [
+    { run = "xdg-open %s", desc = "Open" },
+  ]
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*/"
+run = "git"
+
+[plugin]
+  prepend_preloaders = [
+    # Office Documents
+    { mime = "application/openxmlformats-officedocument.*", run = "office" },
+    { mime = "application/oasis.opendocument.*", run = "office" },
+    { mime = "application/ms-*", run = "office" },
+    { mime = "application/msword", run = "office" },
+    { name = "*.docx", run = "office" },
+  ]
+
+  prepend_previewers = [
+    # Office Documents
+    { mime = "application/openxmlformats-officedocument.*", run = "office" },
+    { mime = "application/oasis.opendocument.*", run = "office" },
+    { mime = "application/ms-*", run = "office" },
+    { mime = "application/msword", run = "office" },
+    { name = "*.docx", run = "office" },
+  ]
