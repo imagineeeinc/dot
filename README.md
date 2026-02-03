@@ -21,10 +21,11 @@ however the desktop experience relies on these dot files.
 ## Requirement
 
 - [Git](https://git-scm.com) (package manager)
-- [Neovim v0.9.0+](https://github.com/neovim/neovim/wiki/Installing-Neovim) (package manager)
+- [Neovim v0.11.5+](https://github.com/neovim/neovim/wiki/Installing-Neovim) (package manager)
 - [Zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
 - [Eza](https://eza.rocks/) (package manager)
 - [Lazygit](https://github.com/jesseduffield/lazygit#installation)
+- [Yazi](https://yazi-rs.github.io/docs/installation) (Make sure to run `ya pkg install` after install and config install)
 
 ## Other apps
 
