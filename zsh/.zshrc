@@ -79,6 +79,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # zoxide
 eval "$(zoxide init zsh)"
+alias zz=__zoxide_zi
 
 # NVM
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
