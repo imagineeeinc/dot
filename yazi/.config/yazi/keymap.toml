@@ -28,10 +28,16 @@
     { on = ["<Space>", "<p>"], run = "plugin toggle-pane max-preview", desc = "Toggle large Preview"},
     { on = ["<Space>", "<h>"], run = "hidden toggle", desc = "Toggle Hidden files"},
     { on = ["<Space>", "<s>"], run = "plugin what-size -- '--clipboard'", desc = "Size of selection"},
+    { on = ["<Space>", "<t>", "1"], run = "sort natural --dir-first --translit=yes", desc = "Sort Alphabetically (ascending natural)"},
+    { on = ["<Space>", "<S-t>", "1"], run = "sort natural --dir-first --reverse --translit=yes", desc = "Sort Alphabetically (descending natural)"},
+    { on = ["<Space>", "<t>", "2"], run = "sort mtime --dir-first --translit=yes", desc = "Sort by last modified (ascending)"},
+    { on = ["<Space>", "<S-t>", "2"], run = "sort mtime --dir-first --reverse --translit=yes", desc = "Sort by last modified (descending)"},
+    { on = ["<Space>", "<t>", "3"], run = "sort size --dir-first --translit=yes", desc = "Sort by size (ascending)"},
+    { on = ["<Space>", "<S-t>", "3"], run = "sort size --dir-first --reverse --translit=yes", desc = "Sort by size (descending)"},
 
     { on = ["b", "c"], run = "tab_create --current", desc = "New tab"},
-    { on = ["b", "b"], run = "tab_switch 1 --relative", desc = "Previous Tab"},
-    { on = ["b", "n"], run = "tab_switch -1 --relative", desc = "Next Tab"},
+    { on = ["b", "b"], run = "tab_switch -1 --relative", desc = "Previous Tab"},
+    { on = ["b", "n"], run = "tab_switch 1 --relative", desc = "Next Tab"},
 
     { on = "y", run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ] },
     { on = "l", run = "plugin smart-enter"},
