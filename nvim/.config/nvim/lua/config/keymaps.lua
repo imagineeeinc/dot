@@ -9,8 +9,6 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- nomap("n", "<leader>b")
--- nomap("n", "<leader>x")
 
 -- navigation
 -- map("n", "<leader>bb", function()
@@ -19,9 +17,6 @@ map("i", "jk", "<ESC>")
 -- map("n", "<leader>bn", function()
 --   require("nvchad.tabufline").next()
 -- end, { desc = "Next Tab" })
--- map("n", "<leader>c", function()
---   require("nvchad.tabufline").close_buffer()
--- end, { desc = "Close current Buffer" })
 map("n", "<leader>qq", "<CMD>qa!<CR>", { desc = "Force Quit" })
 map("n", "<leader>qa", "<CMD>wqa<CR>", { desc = "Save & Quit" })
 
@@ -44,6 +39,7 @@ map("n", "<leader>bb", "<cmd>bprev<cr>", { desc = "Previous Tab" })
 map({ "n", "v" }, "m", "/<CR>", { desc = "Next highlight" })
 map({ "n", "v" }, "M", "?<CR>", { desc = "Previous highlight" })
 map({ "n", "v" }, "n", "e", { desc = "Jump to end of word" })
+map({ "n", "v" }, "gb", "ge", { desc = "Jump to end of the previous word" })
 map("n", "m", "/<CR>", { desc = "Jump to start of word" })
 map({ "n", "v" }, "<leader>cg", "<CMD>Gen<CR>", { desc = "Codeium Gen" })
 
@@ -55,10 +51,11 @@ map("t", "<C-\\>", "<C-\\><C-n>", { desc = "Unfocus Terminal"})
 map({ "n", "v" }, "d", '"_d', { desc = "Delete" })
 map({ "n", "v" }, "c", '"_c', { desc = "Edit selection" })
 map("v", "p", "P", { desc = "Paste" })
-map("i", "<C-p>", "<ESC>pI", { desc = "Paste in insert mode" })
+map("i", "pp", "<ESC>pa", { desc = "Paste in insert mode" })
+map("i", "PP", "<ESC>Pa", { desc = "Paste in insert mode" })
 
-map("v", "<tab>", ">", { desc = "indent" })
-map("v", "<S-tab>", "<", { desc = "unindent" })
+map("v", "<tab>", ">gv", { desc = "indent" })
+map("v", "<S-tab>", "<gv", { desc = "unindent" })
 map("n", "<tab>", ">>", { desc = "indent" })
 map("n", "<S-tab>", "<<", { desc = "unindent" })
 

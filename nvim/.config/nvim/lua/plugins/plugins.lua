@@ -129,10 +129,19 @@ return {
   },
   { "catppuccin/nvim",
     name = "catppuccin",
-    opts = {
-      flavour = "mocha",
-      transparent_background = ternary(vim.g.gonvim_running == 1, false, true),
-    },
+    config = function ()
+      require("catppuccin").setup {
+
+        flavour = "macchiato",
+        transparent_background = ternary(vim.g.gonvim_running == 1, false, true),
+        integrations = {
+          cmp = true,
+          gitsigns = true,
+          nvimtree = true,
+          notify = true
+        }
+      }
+    end
   },
   -- {
   --   "rose-pine/neovim",
@@ -194,11 +203,27 @@ return {
   --     end, { expr = true, silent = true })
   --   end,
   -- },
+  {
+    "bakudankun/pico-8.vim"
+  },
+  {
+    "markbahnman/vim-pico8-color"
+  },
+  {
+    "folke/styler.nvim",
+    config = function()
+      require("styler").setup({
+        themes = {
+          pico8 = { colorscheme = "pico8" },
+        },
+      })
+    end,
+  },
   -- Main Lazy Config
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-nvim",
     },
   },
 }
