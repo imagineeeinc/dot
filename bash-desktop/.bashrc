@@ -25,7 +25,12 @@ export NVM_DIR="$HOME/.config/nvm"
 # PIP
 export PATH="$HOME/.local/lib/python3.13/site-packages:$PATH"
 
+# Flutter
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.local/bin/flutter/bin:$PATH"
+
+# PSP SDK
+export PSPDEV="$HOME/pspdev"
+export PATH="$PATH:$PSPDEV/bin"
 
 export EDITOR="nvim"
 export XDG_CONFIG_HOME=~/.config
