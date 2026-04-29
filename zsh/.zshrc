@@ -116,3 +116,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="/home/imagineee/.gdvm/bin/current_godot:/home/imagineee/.gdvm/bin:$PATH"
+
+# Tailscale
+tailscale completion zsh > "${fpath[1]}/_tailscale"
